@@ -81,6 +81,11 @@ class ViewController: UIViewController {
             print(read.heroName)
         }
         
+        //inverse
+        let readMyGirls = realm.objects(MyGirl.self).filter("myGirlName CONTAINS 'a'")
+        for read in readMyGirls {
+            print(read.Owner)
+        }
     }
 
     override func didReceiveMemoryWarning() {

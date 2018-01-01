@@ -12,4 +12,5 @@ import RealmSwift
 class MyGirl : Object {
     @objc dynamic var myGirlName = ""
     @objc dynamic var timestamp = Date().timeIntervalSince1970
+    let Owner = LinkingObjects(fromType: Hero.self, property: "powerUp")
 }
